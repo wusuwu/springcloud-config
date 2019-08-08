@@ -1,0 +1,28 @@
+spring:
+  profiles:
+  active:
+  - dev
+  
+---
+server:
+  port: 6001
+spring:
+  profiles: dev
+  application:
+    name: config-client-dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekax:1001/eureka/,http://eurekas:1002/eureka/,http://eurekam:1003/eureka/
+---
+server:
+  port: 6002
+spring:
+  profiles: test
+  application:
+    name: config-client-test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eurekax:1001/eureka/,http://eurekas:1002/eureka/,http://eurekam:1003/eur
+  
