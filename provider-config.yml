@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active:
+    - dev
+---
+content: dev content springcloud 7
+
+spring:
+  profiles: dev
+  application:
+    name: service-provider
+    
+---
+content: test content springcloud 7
+
+spring:
+  profiles:
+  application:
+    name: service-provider
